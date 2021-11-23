@@ -16,7 +16,7 @@ public static unsafe partial class ExecutableMemory
         mprotect(alloc, length, PROT_READ | PROT_EXEC);
 
         // TODO: Native library that exports this
-        //__builtin___clear_cache(buffer, buffer + code.Length);
+        //__builtin___clear_cache(alloc->Buffer, alloc->Buffer + code.Length);
         return alloc->Buffer;
     }
 
