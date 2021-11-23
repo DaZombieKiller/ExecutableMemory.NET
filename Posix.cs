@@ -20,4 +20,11 @@ static unsafe class Posix
 
     [DllImport("c", ExactSpelling = true, SetLastError = true)]
     public static extern int mprotect(void* addr, nuint len, int prot);
+
+    public static void __builtin___clear_cache(void* begin, void* end)
+    {
+        // TODO: Use a native library to expose this
+        _ = begin;
+        _ = end;
+    }
 }
